@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.stout.order.OrderTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec <<< FAILURE!
+com.stout.order.OrderTest.testCompareToNegative()  Time elapsed: 0.023 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.stout.order.Order.compareTo(Order.java:94)
+	at com.stout.order.OrderTest.testCompareToNegative(OrderTest.java:156)
+
+com.stout.order.OrderTest.testCompareToPositive()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.stout.order.Order.compareTo(Order.java:94)
+	at com.stout.order.OrderTest.testCompareToPositive(OrderTest.java:145)
+
+com.stout.order.OrderTest.testCompareToEqual()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.stout.order.Order.compareTo(Order.java:94)
+	at com.stout.order.OrderTest.testCompareToEqual(OrderTest.java:167)
+
