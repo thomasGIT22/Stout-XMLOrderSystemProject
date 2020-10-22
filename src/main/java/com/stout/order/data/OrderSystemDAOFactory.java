@@ -10,7 +10,7 @@ package com.stout.order.data;
  * @author ragbr
  */
 public class OrderSystemDAOFactory {
-    private static final String DAO_SOURCE = "XML";
+    private static final String DAO_SOURCE = "MYSQL";
 
     public static OrderSystemDAO getOrderSystemDAO(){
         OrderSystemDAO dao = null;
@@ -19,9 +19,10 @@ public class OrderSystemDAOFactory {
                 //dao = new OrderSystemDAOCSV();
                 break;
             case "XML":
-                dao = new OrderSystemDAOXML();
+                //dao = new OrderSystemDAOXML();
                 break;
             case "MYSQL":
+                dao = new OrderDAOMySQL();
                 break;
             default:
         }

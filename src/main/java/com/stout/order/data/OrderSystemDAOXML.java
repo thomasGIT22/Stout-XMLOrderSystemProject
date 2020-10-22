@@ -74,10 +74,10 @@ public class OrderSystemDAOXML implements OrderSystemDAO {
                         int vendorIDValue = Integer.parseInt(dataElement.getTextContent());
                         newOrder.setVendorID(vendorIDValue);
                         break;
-                    case "orderNumber":
+                    /*case "orderNumber":
                         String orderNumberValue = dataElement.getTextContent();
                         newOrder.setOrderNumber(orderNumberValue);
-                        break;
+                        break;*/
                     default:
                         break;
                 }
@@ -96,11 +96,11 @@ public class OrderSystemDAOXML implements OrderSystemDAO {
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.newDocument();
 
-            Element rootElement = document.createElement("orders");
+            Element rootElement = document.createElement("order");
             document.appendChild(rootElement);
 
-            Element orderElement = document.createElement("order");
-            rootElement.appendChild(orderElement);
+            /*Element orderElement = document.createElement("order");
+            rootElement.appendChild(orderElement);*/
 
             for (Order currentOrder : orders) {
                 DocumentFragment orderFragment = buildOrderFragment(document, currentOrder);
